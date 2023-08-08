@@ -4,11 +4,11 @@ from nltk.tag import pos_tag
 import random
 
 # Download NLTK resources
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
+#nltk.download('punkt')
+#nltk.download('averaged_perceptron_tagger')
 
 # Read paragraph from text file
-with open('paragraph.txt', 'r') as file:
+with open('c1.txt', 'r') as file:
     paragraph = file.read()
 
 # Tokenize the paragraph into sentences
@@ -33,7 +33,7 @@ for i, sentence in enumerate(sentences):
             'correct_answers': keywords[:2]
         })
 
-# Print collected MCQ data
+# Printing collected MCQ data
 for i, mcq in enumerate(mcq_data):
     print(f"MCQ {i+1}:")
     print(f"   Sentence: '{mcq['sentence']}'")
